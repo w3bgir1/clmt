@@ -18,21 +18,21 @@
   <body>
     <header>
       <nav>
-        <ul>
+        <ul id="navigation">
           <div id="logo">
             <img src="images/logo.png" alt="CLMT Partners" />
           </div>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About us</a></li>
-          <li><a href="#approach">Approach</a></li>
-          <li><a href="#team">Team</a></li>
-          <li><a href="#mission">Mission</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li class="home-btn"><a href="#home">Home</a></li>
+          <li class="about-btn"><a href="#about">About us</a></li>
+          <li class="approach-btn"><a href="#approach">Approach</a></li>
+          <li class="team-btn"><a href="#team">Team</a></li>
+          <li class="mission-btn"><a href="#mission">Mission</a></li>
+          <li class="portfolio-btn"><a href="#portfolio">Portfolio</a></li>
+          <li class="contact-btn"><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
-    <section class="section section-home">
+    <section id="home" class="section section-home">
       <div class="video-wrapper">
         <video class="home-video" autoplay muted loop>
           <source src="images/header.mp4" type="video/mp4" />
@@ -43,7 +43,7 @@
         We invest with a mission to contribute to the transition to a
         sustainable world
       </h1>
-      <p id="home">
+      <p id="home-paragraph">
         Climate change is something we have to include in every single analysis,
         every investment. Most people think—or hope—that global warming is
         something their children or grandchildren will have to reckon with.
@@ -171,12 +171,17 @@
       </p>
     </section>
     <section id="contact" class="section section-contact">
-      <p>We are CLMT Partners</p>
+      <h3>Contact</h3>
+      <h4>We are CLMT Partners</h4>
       <p>
-        A'DAM Tower, 13/F Overhoeksplein 1 1031 KS Amsterdam  The Netherlands
+        A'DAM Tower, <br />
+        13/F Overhoeksplein 1<br />
+        1031 KS Amsterdam <br />
+        The Netherlands<br />
         ask@clmtpartners.com
       </p>
     </section>
     <footer>© CLMT Partners. All Rights Reserved.</footer>
+    <script src="script.js"></script>
   </body>
 </html>

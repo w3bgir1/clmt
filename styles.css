@@ -50,7 +50,8 @@ header nav ul li a:after {
   transition: -webkit-transform 0.4s;
 }
 
-header nav ul li a:hover::after {
+header nav ul li a:hover::after,
+.active-link a::after {
   transform: translateX(-50%) scaleX(1);
 }
 
@@ -114,7 +115,7 @@ h3 {
   color: #19a87e;
 }
 
-#home {
+#home-paragraph {
   width: 80%;
   margin: 0 auto;
   padding: 3rem 0;
