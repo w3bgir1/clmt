@@ -1,7 +1,4 @@
 window.addEventListener("scroll", () => {
-  window.scroll({
-    behavior: "smooth"
-  });
   const active = document.elementFromPoint(100, 100);
   if (active.className.includes("section")) {
     document.querySelector("#navigation").childNodes.forEach(el => {
