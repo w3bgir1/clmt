@@ -13,6 +13,10 @@
   padding: 2rem;
 }
 
+ul {
+  list-style: none;
+}
+
 header {
   width: 100%;
   position: fixed;
@@ -23,7 +27,6 @@ header {
 header nav ul {
   display: flex;
   flex-direction: row;
-  list-style: none;
   width: 100%;
   align-items: center;
 }
@@ -116,12 +119,12 @@ h3 {
 }
 
 #home-paragraph {
+  min-height: 70vh;
   width: 80%;
   margin: 0 auto;
   padding: 3rem 0;
   text-align: center;
   font-size: 1.2rem;
-  font-family: "Montserrat", sans-serif;
   color: #444;
   font-style: italic;
 }
@@ -139,6 +142,22 @@ h3 {
 }
 
 .section-about h3 {
+  margin-bottom: 1rem;
+}
+
+.team-content {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.team-card {
+  margin: 1rem;
+  width: 33%;
+}
+
+.team-card p {
+  font-weight: 600;
   margin-bottom: 1rem;
 }
 
