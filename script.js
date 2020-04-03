@@ -1,5 +1,12 @@
 window.addEventListener("scroll", () => {
-  const active = document.elementFromPoint(100, 100);
+  let active =
+    window.scrollY < window.innerHeight
+      ? document.querySelector("#home")
+      : document.elementFromPoint(
+          window.innerWidth / 2,
+          window.innerHeight / 2
+        );
+
   if (active.className.includes("section")) {
     document.querySelector("#navigation").childNodes.forEach(el => {
       if (!el.className) return;
