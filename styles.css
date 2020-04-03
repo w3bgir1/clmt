@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 100;
+  padding: 1rem;
+}
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  width: 100%;
+  align-items: center;
+}
+header nav ul li a {
+  color: #444;
+  text-decoration: none;
+  padding: 1rem;
+  text-transform: uppercase;
+  position: relative;
+}
+header nav ul li a:after {
+  bottom: 0;
+  left: 50%;
+  content: "";
+  display: block;
+  background-color: #19a87e;
+  width: 75%;
+  height: 3px;
+  position: absolute;
+  transition: transform 0.4s;
+  transform: translateX(-50%) scaleX(0);
+  transition: transform 0.4s, -webkit-transform 0.4s;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+}
+
+header nav ul li a:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+#logo {
+  flex: 1;
+}
+
+#logo img {
+  width: 5rem;
+}
+
+.content {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.section-home {
+  position: relative;
+}
+.section-home h1 {
+  position: absolute;
+  top: calc(50% - 3rem);
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+  color: #ffff;
+  font-size: 3rem;
+  padding: 0 10%;
+  font-family: "Montserrat", sans-serif;
+}
+.section-home .video-wrapper {
+  position: relative;
+  z-index: 1;
+  width: 100vw;
+}
+.section-home .video-wrapper .home-video {
+  width: 100vw;
+}
+.section-home .video-wrapper::after {
+  position: absolute;
+  width: 100vw;
+  content: "";
+  height: 100%;
+  display: block;
+  background-image: repeating-linear-gradient(
+    to right top,
+    rgba(255, 255, 255, 0.1) 0px,
+    rgba(255, 255, 255, 0.1) 2px,
+    rgba(0, 0, 0, 0.1) 2px,
+    rgba(0, 0, 0, 0.1) 4px
+  );
+  top: 0;
+  left: 0;
+  z-index: 9;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 2rem;
+  color: #19a87e;
+}
+
+#home {
+  width: 80%;
+  margin: 0 auto;
+  padding: 3rem 0;
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+  color: #444;
+  font-style: italic;
+}
+
+.section-about {
+  padding: 3rem 0;
+  background-image: url(/images/business.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.section-about h3 {
+  margin-bottom: 1rem;
+}
+
+.climate-video {
+  width: 60%;
+  margin: 0 auto;
+}
