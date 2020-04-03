@@ -5,6 +5,14 @@
   font-family: "Montserrat", sans-serif;
 }
 
+.section {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}
+
 header {
   width: 100%;
   position: fixed;
@@ -61,6 +69,7 @@ header nav ul li a:hover::after {
 
 .section-home {
   position: relative;
+  padding: 0;
 }
 .section-home h1 {
   position: absolute;
@@ -135,4 +144,24 @@ h3 {
 .climate-video {
   width: 60%;
   margin: 0 auto;
+}
+
+.portfolio-image {
+  width: 20rem;
+  height: auto;
+}
+
+#contact {
+  background-image: url(/images/mountains.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+footer {
+  background: #444;
+  color: #fff;
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 2rem;
 }
