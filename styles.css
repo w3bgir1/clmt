@@ -23,6 +23,7 @@ li {
 }
 
 .content {
+  max-width: 1440px;
   width: 80%;
   margin: 0 auto;
   display: flex;
@@ -99,6 +100,8 @@ header nav ul li a:hover::after,
   position: relative;
   z-index: 1;
   width: 100vw;
+  max-height: 100vh;
+  overflow: hidden;
   padding: 0;
 }
 .section-home .video-wrapper .home-video {
@@ -132,7 +135,7 @@ h3 {
 }
 
 #home-paragraph {
-  min-height: 70vh;
+  min-height: 80vh;
   padding: 3rem 0;
   text-align: center;
   font-size: 1.2rem;
@@ -199,9 +202,8 @@ h3 {
   margin-bottom: 1rem;
 }
 
-#mission {
-}
-#mission .content {
+#mission .content,
+#approach .content {
   flex-direction: row;
   align-items: center;
 }
