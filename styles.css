@@ -204,6 +204,7 @@ h3::after {
   font-size: 1.2rem;
   font-style: italic;
   font-weight: 700;
+  position: relative;
 }
 
 .section-about {
@@ -445,4 +446,29 @@ footer {
   font-size: 0.8rem;
   text-align: center;
   padding: 2rem;
+}
+
+.quote::before,
+.quote::after {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #32bb8f;
+  opacity: 0.5;
+  z-index: -1;
+  font-size: 10rem;
+  text-align: left;
+}
+
+.quote::before {
+  content: "“";
+  bottom: -20%;
+  left: -5rem;
+}
+
+.quote::after {
+  content: "”";
+  bottom: -100%;
+  right: -100%;
 }
