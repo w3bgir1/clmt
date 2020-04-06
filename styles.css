@@ -218,6 +218,7 @@ h3::after {
 
 .section-about h3 {
   width: max-content;
+  color: #f5f5f5;
 }
 
 .section-about p {
