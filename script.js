@@ -1,6 +1,6 @@
 window.addEventListener("scroll", () => {
   let active =
-    window.scrollY < window.innerHeight
+    window.scrollY < window.innerHeight - window.innerHeight * 0.3
       ? document.querySelector("#home")
       : document.elementFromPoint(
           window.innerWidth / 2,
@@ -8,7 +8,7 @@ window.addEventListener("scroll", () => {
         );
 
   if (active.className.includes("section")) {
-    document.querySelector("#navigation").childNodes.forEach(el => {
+    document.querySelector("#navigation").childNodes.forEach((el) => {
       if (!el.className) return;
       el.className.includes(active.id)
         ? el.classList.add("active-link")
@@ -17,7 +17,7 @@ window.addEventListener("scroll", () => {
   }
 });
 
-(function() // Code in a function to create an isolate scope
+(function () // Code in a function to create an isolate scope
 {
   var speed = 500;
   var moving_frequency = 15; // Affects performance !
@@ -29,7 +29,7 @@ window.addEventListener("scroll", () => {
         ? null
         : links[i].attributes.href.nodeValue.toString();
     if (href !== null && href.length > 1 && href.substr(0, 1) == "#") {
-      links[i].onclick = function() {
+      links[i].onclick = function () {
         var element;
         var href = this.attributes.href.nodeValue.toString();
         if ((element = document.getElementById(href.substr(1)))) {
@@ -40,9 +40,9 @@ window.addEventListener("scroll", () => {
             hop_count;
 
           for (var i = 1; i <= hop_count; i++) {
-            (function() {
+            (function () {
               var hop_top_position = gap * i;
-              setTimeout(function() {
+              setTimeout(function () {
                 window.scrollTo(
                   0,
                   hop_top_position + getScrollTopDocumentAtBegin
@@ -57,7 +57,7 @@ window.addEventListener("scroll", () => {
     }
   }
 
-  var getScrollTopElement = function(e) {
+  var getScrollTopElement = function (e) {
     var top = 0;
 
     while (e.offsetParent != undefined && e.offsetParent != null) {
@@ -68,7 +68,7 @@ window.addEventListener("scroll", () => {
     return top;
   };
 
-  var getScrollTopDocument = function() {
+  var getScrollTopDocument = function () {
     return document.documentElement.scrollTop + document.body.scrollTop;
   };
 })();
