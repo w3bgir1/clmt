@@ -27,11 +27,31 @@
 }
 
 .modal-content {
+  position: relative;
   width: 60%;
   background-color: #f5f5f5;
   min-height: 70vh;
   padding: 3rem;
+  padding-top: 6rem;
   border-radius: 1rem;
+}
+
+.modal-content .close-btn {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 3rem;
+  color: #32bb8f;
+  opacity: 0.8;
+  transition: all 0.2s;
+}
+
+.modal-content .close-btn:hover {
+  opacity: 1;
+}
+
+.modal-content .close-btn i {
+  cursor: pointer;
 }
 
 ul {

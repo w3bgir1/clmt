@@ -1,3 +1,55 @@
+const data = {
+  sander: {
+    name: "Sander van Maanen",
+    linkedin: "https://www.linkedin.com/in/sander-van-maanen-863102/",
+    email: "",
+    list: `<li>
+    Former Managing Director at AlpInvest, a Carlyle group company
+    managing ~$50bn of Private Equity assets. Member of Global
+    Investment Committee. Responsible for investments across Asia,
+    Australia and New Zealand
+  </li>
+  <li>
+    Previously at Procter &amp; Gamble and The Boston Consulting Group
+  </li>
+  <li>MSc from Delft University of Technology and MBA from INSEAD</li>`,
+  },
+  steven: {
+    name: "Steven Zwaan",
+    linkedin: "https://www.linkedin.com/in/steven-zwaan-bb81bb/",
+    email: "",
+    list: `<li>
+    Co-founder and Board Director of UPC Renewables, one of the
+    largest independent renewable energy companies in the Asia-Pacific
+    region with assets comprising over 10GW in operation, under
+    construction and in development.
+  </li>
+  <li>
+    Co-founder of MyTown, developer of affordable co-living
+    communities in the Philippines
+  </li>
+  <li>
+    Previously a Managing Director in Investment Banking in Hong Kong
+  </li>`,
+  },
+  han: {
+    name: "Han de Groot",
+    linkedin: "https://www.linkedin.com/in/handegroot/",
+    email: "",
+    list: `<li>
+    Background of leading a marketing technology company from start to
+    public exit as founder, CEO and Board Director
+  </li>
+  <li>
+    Co-founder of Stadswaarde, which aims to redefine the concept of
+    sustainable urban living
+  </li>
+  <li>
+    Investor in Tech & Life Science
+  </li>`,
+  },
+};
+
 window.addEventListener("scroll", () => {
   let active =
     window.scrollY < window.innerHeight - window.innerHeight * 0.3
@@ -73,35 +125,30 @@ window.addEventListener("scroll", () => {
   };
 })();
 
-const handleShow = (name) => {
+const handleShow = (person) => {
+  const { name, linkedin, email, list } = data[person];
+
   const markup = `
-  <i class="far fa-times-circle" onclick="handleClose()"></i>
+  <div class='close-btn'>
+    <i class="far fa-times-circle" onclick="handleClose()"></i>
+  </div>
   <div class="team-card">
   <p>
-    Sander van Maanen
+    ${name}
   </p>
   <div class="links-block">
     <a
-      href="https://www.linkedin.com/in/sander-van-maanen-863102/"
+      href="${linkedin}"
       target="_blank"
       class="linkedin-link"
       ><i class="fab fa-linkedin-in"></i
     ></a>
-    <a class="linkedin-link" href="mailto:ask@clmtpartners.com"
+    <a class="linkedin-link" href="mailto:${email}"
       ><i class="fas fa-envelope"></i
     ></a>
   </div>
   <ul>
-    <li>
-      Former Managing Director at AlpInvest, a Carlyle group company
-      managing ~$50bn of Private Equity assets. Member of Global
-      Investment Committee. Responsible for investments across Asia,
-      Australia and New Zealand
-    </li>
-    <li>
-      Previously at Procter &amp; Gamble and The Boston Consulting Group
-    </li>
-    <li>MSc from Delft University of Technology and MBA from INSEAD</li>
+   ${list}
   </ul>
 </div>`;
 
