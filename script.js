@@ -72,3 +72,47 @@ window.addEventListener("scroll", () => {
     return document.documentElement.scrollTop + document.body.scrollTop;
   };
 })();
+
+const handleShow = (name) => {
+  const markup = `
+  <i class="far fa-times-circle" onclick="handleClose()"></i>
+  <div class="team-card">
+  <p>
+    Sander van Maanen
+  </p>
+  <div class="links-block">
+    <a
+      href="https://www.linkedin.com/in/sander-van-maanen-863102/"
+      target="_blank"
+      class="linkedin-link"
+      ><i class="fab fa-linkedin-in"></i
+    ></a>
+    <a class="linkedin-link" href="mailto:ask@clmtpartners.com"
+      ><i class="fas fa-envelope"></i
+    ></a>
+  </div>
+  <ul>
+    <li>
+      Former Managing Director at AlpInvest, a Carlyle group company
+      managing ~$50bn of Private Equity assets. Member of Global
+      Investment Committee. Responsible for investments across Asia,
+      Australia and New Zealand
+    </li>
+    <li>
+      Previously at Procter &amp; Gamble and The Boston Consulting Group
+    </li>
+    <li>MSc from Delft University of Technology and MBA from INSEAD</li>
+  </ul>
+</div>`;
+
+  document.querySelector(".modal").classList.add("modal-visible");
+
+  document
+    .querySelector(".modal-content")
+    .insertAdjacentHTML("beforeend", markup);
+};
+
+const handleClose = () => {
+  document.querySelector(".modal-content").innerHTML = "";
+  document.querySelector(".modal").classList.remove("modal-visible");
+};
