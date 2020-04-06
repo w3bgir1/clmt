@@ -200,8 +200,8 @@ h3::after {
 .quote {
   color: #2a2d34;
   text-align: center;
-  line-height: 3rem;
-  font-size: 2rem;
+  line-height: 1.8rem;
+  font-size: 1.2rem;
   font-style: italic;
   font-weight: 700;
 }
@@ -364,21 +364,40 @@ h3::after {
   margin: 0;
 }
 
-#portfolio {
-  margin: 3rem 0;
-  text-align: right;
-}
 #portfolio .content .content-wrapper {
+  margin: 3rem 0;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  width: 50%;
-  margin-left: auto;
 }
 
 .portfolio-image {
-  width: 20rem;
-  height: auto;
+  height: 3rem;
+  width: auto;
+  display: inline-block;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.portfolio-deck {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.portfolio-card {
+  align-self: stretch;
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+.portfolio-card:first-child {
+  margin-right: 1rem;
 }
 
 #contact {
