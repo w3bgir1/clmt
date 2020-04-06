@@ -232,6 +232,8 @@ h3::after {
 #approach .content .content-wrapper {
   width: 50%;
   margin-left: auto;
+  display: flex;
+  flex-direction: column;
 }
 #approach .content .content-wrapper h3 {
   margin-left: auto;
