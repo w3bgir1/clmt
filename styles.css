@@ -213,15 +213,16 @@ h3 {
 
 .section-team .video-wrapper {
   position: relative;
-  height: 70vh;
+  min-height: 70vh;
   overflow: hidden;
 }
 
 .section-team .video-wrapper::after {
   position: absolute;
-  width: 100vw;
+  min-height: 100%;
+  min-width: 100vw;
   content: "";
-  height: 100%;
+
   display: block;
   background-image: repeating-linear-gradient(
     to right top,
@@ -251,7 +252,9 @@ h3 {
 }
 
 .section-team .video-wrapper .team-video {
-  width: 100vw;
+  min-height: 100%;
+  min-width: 100vw;
+  margin-top: -10rem;
 }
 
 .team-content {
