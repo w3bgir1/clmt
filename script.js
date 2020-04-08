@@ -3,7 +3,8 @@ const data = {
     name: "Sander van Maanen",
     linkedin: "https://www.linkedin.com/in/sander-van-maanen-863102/",
     email: "",
-    list: `<li>
+    list: `
+    <li>
     Former Managing Director at AlpInvest, a Carlyle group company
     managing ~$50bn of Private Equity assets. Member of Global
     Investment Committee. Responsible for investments across Asia,
@@ -18,7 +19,8 @@ const data = {
     name: "Steven Zwaan",
     linkedin: "https://www.linkedin.com/in/steven-zwaan-bb81bb/",
     email: "",
-    list: `<li>
+    list: `
+    <li>
     Co-founder and Board Director of UPC Renewables, one of the
     largest independent renewable energy companies in the Asia-Pacific
     region with assets comprising over 10GW in operation, under
@@ -36,7 +38,8 @@ const data = {
     name: "Han de Groot",
     linkedin: "https://www.linkedin.com/in/handegroot/",
     email: "",
-    list: `<li>
+    list: `
+    <li>
     Background of leading a marketing technology company from start to
     public exit as founder, CEO and Board Director
   </li>
@@ -49,36 +52,86 @@ const data = {
   </li>`,
   },
 };
+const menu = document.querySelector(".navigation-menu");
+const modal = document.querySelector(".modal");
+const modalContent = document.querySelector(".modal-content");
+const menuBtn = document.querySelector(".mobile-menu-icon--bars");
+const closeMenuBtn = document.querySelector(".mobile-menu-icon--close");
 
 window.addEventListener("scroll", () => {
-  let active =
-    window.scrollY < window.innerHeight - window.innerHeight * 0.3
-      ? document.querySelector("#home")
-      : document.elementFromPoint(
-          window.innerWidth / 2,
-          window.innerHeight / 2
-        );
+  let active = document.elementFromPoint(
+    window.innerWidth / 2,
+    window.innerHeight / 2
+  );
 
   if (active.className.includes("section")) {
-    document.querySelector("#navigation").childNodes.forEach((el) => {
-      if (!el.className) return;
-      el.className.includes(active.id)
-        ? el.classList.add("active-link")
-        : el.classList.remove("active-link");
+    menu.childNodes.forEach((el) => {
+      if (!el.dataset) return;
+      el.dataset.link === active.id
+        ? el.classList.add("navigation-link--active")
+        : el.classList.remove("navigation-link--active");
     });
   }
 });
 
-window.addEventListener("hashchange", function () {
-  window.scrollTo(window.scrollX, window.scrollY - 100);
-});
+const handleShow = (person) => {
+  const { name, linkedin, email, list } = data[person];
 
+  const markup = `
+  <div class='btn--close'>
+    <i class="far fa-times-circle icon--close" onclick="handleClose()"></i>
+  </div>
+  <div class="team-description">
+  <p>
+    ${name}
+  </p>
+  <div class="links-block">
+    <a
+      href="${linkedin}"
+      target="_blank"
+      class="icon"
+      ><i class="fab fa-linkedin-in"></i
+    ></a>
+    <a class="icon" href="mailto:${email}"
+      ><i class="fas fa-envelope"></i
+    ></a>
+  </div>
+  <ul>
+   ${list}
+  </ul>
+</div>`;
+
+  modal.classList.add("modal-visible");
+  modalContent.insertAdjacentHTML("beforeend", markup);
+};
+
+const handleClose = () => {
+  modalContent.innerHTML = "";
+  modal.classList.remove("modal-visible");
+};
+
+const showMobileMenu = () => {
+  menuBtn.style.display = "none";
+  menu.classList.add("navigation-menu--mobile");
+  closeMenuBtn.style.display = "block";
+};
+
+const closeMobileMenu = () => {
+  if (window.innerWidth > 640) return;
+
+  menuBtn.style.display = "block";
+  menu.classList.remove("navigation-menu--mobile");
+  closeMenuBtn.style.display = "none";
+};
+
+// Smoth scroll
 (function () // Code in a function to create an isolate scope
 {
   var speed = 500;
   var moving_frequency = 15; // Affects performance !
   var links = document.getElementsByTagName("a");
   var href;
+
   for (var i = 0; i < links.length; i++) {
     href =
       links[i].attributes.href === undefined
@@ -101,7 +154,7 @@ window.addEventListener("hashchange", function () {
               setTimeout(function () {
                 window.scrollTo(
                   0,
-                  hop_top_position + getScrollTopDocumentAtBegin
+                  hop_top_position + getScrollTopDocumentAtBegin + 9
                 );
               }, moving_frequency * i);
             })();
@@ -128,42 +181,3 @@ window.addEventListener("hashchange", function () {
     return document.documentElement.scrollTop + document.body.scrollTop;
   };
 })();
-
-const handleShow = (person) => {
-  const { name, linkedin, email, list } = data[person];
-
-  const markup = `
-  <div class='close-btn'>
-    <i class="far fa-times-circle" onclick="handleClose()"></i>
-  </div>
-  <div class="team-card">
-  <p>
-    ${name}
-  </p>
-  <div class="links-block">
-    <a
-      href="${linkedin}"
-      target="_blank"
-      class="linkedin-link"
-      ><i class="fab fa-linkedin-in"></i
-    ></a>
-    <a class="linkedin-link" href="mailto:${email}"
-      ><i class="fas fa-envelope"></i
-    ></a>
-  </div>
-  <ul>
-   ${list}
-  </ul>
-</div>`;
-
-  document.querySelector(".modal").classList.add("modal-visible");
-
-  document
-    .querySelector(".modal-content")
-    .insertAdjacentHTML("beforeend", markup);
-};
-
-const handleClose = () => {
-  document.querySelector(".modal-content").innerHTML = "";
-  document.querySelector(".modal").classList.remove("modal-visible");
-};

@@ -11,126 +11,106 @@
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap"
       rel="stylesheet"
     />
-
-    <link
-      rel="apple-touch-icon"
-      sizes="57x57"
-      href="/icons/apple-icon-57x57.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="60x60"
-      href="/icons/apple-icon-60x60.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="72x72"
-      href="/icons/apple-icon-72x72.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="76x76"
-      href="/icons/apple-icon-76x76.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="114x114"
-      href="/icons/apple-icon-114x114.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="/icons/apple-icon-120x120.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="144x144"
-      href="/icons/apple-icon-144x144.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="/icons/apple-icon-152x152.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/icons/apple-icon-180x180.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="/icons/android-icon-192x192.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/icons/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="96x96"
-      href="/icons/favicon-96x96.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/icons/favicon-16x16.png"
-    />
-    <link rel="manifest" href="/manifest.json" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png" />
-    <meta name="theme-color" content="#ffffff" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png" />
     <link rel="stylesheet" href="styles.css" />
     <title>CLMT Partners</title>
   </head>
   <body>
     <header>
-      <nav>
-        <ul id="navigation">
-          <div id="logo">
-            <img src="images/logo.png" alt="CLMT Partners" />
-          </div>
-          <li class="home-btn active-link"><a href="#home">Home</a></li>
-          <li class="about-btn"><a href="#about">About us</a></li>
-          <li class="approach-btn"><a href="#approach">Approach</a></li>
-          <li class="mission-btn"><a href="#mission">Mission</a></li>
-          <li class="team-btn"><a href="#team">Team</a></li>
-          <li class="portfolio-btn"><a href="#portfolio">Portfolio</a></li>
-          <li class="contact-btn"><a href="#contact">Contact</a></li>
+      <nav id="navigation">
+        <div class="navigation-logo">
+          <img src="images/logo.png" alt="CLMT Partners" />
+        </div>
+        <i
+          class="fas fa-bars mobile-menu-icon mobile-menu-icon--bars"
+          onclick="showMobileMenu()"
+        ></i>
+        <i
+          class="far fa-times-circle mobile-menu-icon mobile-menu-icon--close"
+          onclick="closeMobileMenu()"
+        ></i>
+        <ul class="navigation-menu">
+          <li
+            data-link="home"
+            onclick="closeMobileMenu()"
+            class="navigation-link navigation-link--active"
+          >
+            <a href="#home">Home</a>
+          </li>
+          <li
+            data-link="about"
+            onclick="closeMobileMenu()"
+            class="navigation-link"
+          >
+            <a href="#about">About us</a>
+          </li>
+          <li
+            data-link="approach"
+            onclick="closeMobileMenu()"
+            class="navigation-link"
+          >
+            <a href="#approach">Approach</a>
+          </li>
+          <li
+            data-link="mission"
+            onclick="closeMobileMenu()"
+            class="navigation-link"
+          >
+            <a href="#mission">Mission</a>
+          </li>
+          <li
+            data-link="team"
+            onclick="closeMobileMenu()"
+            class="navigation-link"
+          >
+            <a href="#team">Team</a>
+          </li>
+          <li
+            data-link="portfolio"
+            onclick="closeMobileMenu()"
+            class="navigation-link"
+          >
+            <a href="#portfolio">Portfolio</a>
+          </li>
+          <li
+            data-link="contact"
+            onclick="closeMobileMenu()"
+            class="navigation-link"
+          >
+            <a href="#contact">Contact</a>
+          </li>
         </ul>
       </nav>
     </header>
     <section class="modal">
-      <div class="modal-content">
-      </div>
+      <div class="modal-content"></div>
     </section>
-    <section id="home" class="section section-home">
-      <div class="video-wrapper">
-        <video class="home-video" autoplay muted loop>
+    <div class="video">
+      <div class="video-wrapper video-wrapper--home">
+        <video class="video-background" autoplay muted loop>
           <source src="images/header.mp4" type="video/mp4" />
           Your browser is not supported!
         </video>
       </div>
-      <h1>
-        We invest with a mission to contribute to the transition to a
-        sustainable world
-      </h1>
-      <p id="home-paragraph" class="content quote">
-        Climate change is something we have to include in every single analysis,
-        every investment. Most people think—or hope—that global warming is
-        something their children or grandchildren will have to reckon with.
-        Climate change however is happening suddenly and soon. The world is
-        skidding toward a future that’s overheated and underwater—and where
-        carbon will be treated as a costly waste product that needs to be
-        captured and stored
-      </p>
-    </section>
-    <section id="about" class="section section-about">
+      <section id="home" class="section section--home">
+        <h1>
+          We invest with a mission to contribute to the transition to a
+          sustainable world
+        </h1>
+      </section>
+    </div>
+    <p class="content quote">
+      Climate change is something we have to include in every single analysis,
+      every investment. Most people think—or hope—that global warming is
+      something their children or grandchildren will have to reckon with.
+      Climate change however is happening suddenly and soon. The world is
+      skidding toward a future that’s overheated and underwater—and where carbon
+      will be treated as a costly waste product that needs to be captured and
+      stored
+    </p>
+    <section id="about" class="section section--about">
       <div class="content">
         <h3>About us</h3>
         <p>
@@ -145,63 +125,58 @@
         </p>
       </div>
     </section>
-    <section id="approach" class="section section-approach">
+    <section id="approach" class="section section--approach">
       <div class="content">
-        <div class="content-wrapper">
-          <h3>Approach</h3>
-          <p>
-            We invest globally with strong focus and conviction in the energy
-            transition and plant based food. We bring the financial benefits of
-            sustainability to private capital and provide business leaders an
-            alternative source of financing. We seek for additionality and for
-            our investments to have a positive impact on the world. We work with
-            a circle of investors and partners who believe that extraordinary
-            long-term returns can be achieved when profit and purpose are
-            aligned. We are a by invitation, members only investment community.
-            Our members are family offices, high net worth individuals and
-            institutions.
-          </p>
-        </div>
+        <h3>Approach</h3>
+        <p>
+          We invest globally with strong focus and conviction in the energy
+          transition and plant based food. We bring the financial benefits of
+          sustainability to private capital and provide business leaders an
+          alternative source of financing. We seek for additionality and for our
+          investments to have a positive impact on the world. We work with a
+          circle of investors and partners who believe that extraordinary
+          long-term returns can be achieved when profit and purpose are aligned.
+          We are a by invitation, members only investment community. Our members
+          are family offices, high net worth individuals and institutions.
+        </p>
       </div>
     </section>
-    <section id="mission" class="section section-mission">
+    <section id="mission" class="section section--mission">
       <div class="content">
-        <div class="content-wrapper">
-          <h3>Mission</h3>
-          <p>
-            Our mission is to act as a catalyst of private capital participation
-            in the transition to a sustainable world. The world is at crossroads
-            as tackling climate change will affect everything from
-            transportation, real estate, manufacturing and agriculture to energy
-            production and the design of cities. Our investments embrace
-            sustainability and positive impact as a competitive advantage. We
-            don’t compromise profit for purpose. We believe every investment is
-            an opportunity to champion long term sustainability.
-          </p>
-        </div>
+        <h3>Mission</h3>
+        <p>
+          Our mission is to act as a catalyst of private capital participation
+          in the transition to a sustainable world. The world is at crossroads
+          as tackling climate change will affect everything from transportation,
+          real estate, manufacturing and agriculture to energy production and
+          the design of cities. Our investments embrace sustainability and
+          positive impact as a competitive advantage. We don’t compromise profit
+          for purpose. We believe every investment is an opportunity to champion
+          long term sustainability.
+        </p>
       </div>
     </section>
-    <section class="section" id='quote'>
-      <div class="content quote">
-        We are in the critical decade. It is no exaggeration to say that what we do regarding emissions reductions between now and 2030 will determine the quality of human life on this planet for hundreds of years to come
-      </div>
-    </section>
-    <section class="section section-team">
-      <div  class="video-wrapper">
-        <video class="team-video" autoplay muted loop>
+    <div class="content quote">
+      We are in the critical decade. It is no exaggeration to say that what we
+      do regarding emissions reductions between now and 2030 will determine the
+      quality of human life on this planet for hundreds of years to come
+    </div>
+    <div class="video">
+      <div class="video-wrapper video-wrapper--team">
+        <video class="video-background" autoplay muted loop>
           <source src="images/fish.mp4" type="video/mp4" />
           Your browser is not supported!
         </video>
       </div>
-      <div id="team" class="content section-team-content">
-        <div class="content-wrapper">
+      <section id="team" class="section section--team">
+        <div class="content">
           <h3>Team</h3>
           <p>
             CLMT’s founding partners have extensive experience in investing,
-            entrepreneurship and managing companies across the full life cycle from
-            startup to (public) exit.
+            entrepreneurship and managing companies across the full life cycle
+            from startup to (public) exit.
           </p>
-          <div class="team-content">
+          <div class="team-list">
             <div class="team-card">
               <div class="team-avatar" onclick="handleShow('sander')">
                 <i class="fas fa-user"></i>
@@ -209,58 +184,55 @@
               <p>Sander van Maanen</p>
             </div>
             <div class="team-card">
-              <div class="team-avatar"  onclick="handleShow('steven')">
+              <div class="team-avatar" onclick="handleShow('steven')">
                 <i class="fas fa-user"></i>
               </div>
               <p>Steven Zwaan</p>
             </div>
             <div class="team-card">
-              <div class="team-avatar"  onclick="handleShow('han')">
+              <div class="team-avatar" onclick="handleShow('han')">
                 <i class="fas fa-user"></i>
               </div>
               <p>Han de Groot</p>
             </div>
           </div>
         </div>
-      </div>
-      </div>
-    </section>
-   
-    <section id="portfolio" class="section section-portfolio">
+      </section>
+    </div>
+    <section id="portfolio" class="section section--portfolio">
       <div class="content">
-        <div class="content-wrapper">
-          <h3>Portfolio</h3>
-          <div class="portfolio-deck">
-            <div class="portfolio-card">
-              <a href='https://www.livekindly.co/' target="_blank">
-                <img
+        <h3>Portfolio</h3>
+        <div class="portfolio-deck">
+          <div class="portfolio-card">
+            <a href="https://www.livekindly.co/" target="_blank">
+              <img
                 src="/images/livekindly.png"
                 alt="livekindly"
-                class="portfolio-image"
+                class="portfolio-logo"
               />
-              </a>
-              <p>
-                Global start-up on a mission to become the pre-eminent global plant
-                based food company.
-              </p> 
-            </div> 
-            <div class="portfolio-card">
-              <a href='https://www.upcrenewables.com/' target="_blank">
-                <img
+            </a>
+            <p>
+              Global start-up on a mission to become the pre-eminent global
+              plant based food company.
+            </p>
+          </div>
+          <div class="portfolio-card">
+            <a href="https://www.upcrenewables.com/" target="_blank">
+              <img
                 src="/images/upcrenewable.png"
                 alt="upcrenewable"
-                class="portfolio-image"
+                class="portfolio-logo"
               />
-              </a>
-              <p>
-                Leading renewable energy developer in the Asia Pacific region with over twenty years of global experience.
-              </p> 
-            </div>
+            </a>
+            <p>
+              Leading renewable energy developer in the Asia Pacific region with
+              over twenty years of global experience.
+            </p>
           </div>
         </div>
       </div>
     </section>
-    <section id="contact" class="section section-contact">
+    <section id="contact" class="section section--contact">
       <div class="content">
         <h3>Contact</h3>
         <h4>We are CLMT Partners</h4>
@@ -269,7 +241,7 @@
           Overhoeksplein 1<br />
           1031 KS Amsterdam <br />
           <a href="mailto:ask@clmtpartners.com"
-            ><i class="fas fa-envelope linkedin-link"></i
+            ><i class="fas fa-envelope icon"></i
             ><span>ask@clmtpartners.com</span></a
           >
         </p>
