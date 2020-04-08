@@ -241,7 +241,7 @@ header {
   left: 50%;
   content: "";
   display: block;
-  background-color: #32bb8f;
+  background: #32bb8f;
   width: 75%;
   height: 3px;
   position: absolute;
@@ -547,6 +547,7 @@ footer {
   }
 
   .navigation-link a {
+    display: inline-block;
     font-size: 1.5rem;
     line-height: 2.25rem;
   }
@@ -574,8 +575,17 @@ footer {
   }
 
   .navigation-link--active a {
-    font-weight: 700;
-    color: #32bb8f;
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(#7ed56f),
+      to(#32bb8f)
+    );
+    background-image: linear-gradient(to right, #7ed56f, #32bb8f);
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: 0.2rem;
   }
 
   .section--home h1 {
