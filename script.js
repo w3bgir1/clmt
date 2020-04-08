@@ -52,11 +52,21 @@ const data = {
   </li>`,
   },
 };
+
+const isMobile = window.innerWidth < 640;
+
 const menu = document.querySelector(".navigation-menu");
 const modal = document.querySelector(".modal");
 const modalContent = document.querySelector(".modal-content");
 const menuBtn = document.querySelector(".mobile-menu-icon--bars");
 const closeMenuBtn = document.querySelector(".mobile-menu-icon--close");
+const videoSource = document.querySelector(".video-source");
+const video = document.querySelector(".video-background--home");
+
+const srcPath = isMobile ? "/images/header-mobile.mp4" : "/images/header.mp4";
+
+videoSource.setAttribute("src", srcPath);
+video.load();
 
 window.addEventListener("scroll", () => {
   let active = document.elementFromPoint(
@@ -111,17 +121,17 @@ const handleClose = () => {
 };
 
 const showMobileMenu = () => {
+  closeMenuBtn.style.display = "block";
   menuBtn.style.display = "none";
   menu.classList.add("navigation-menu--mobile");
-  closeMenuBtn.style.display = "block";
 };
 
 const closeMobileMenu = () => {
-  if (window.innerWidth > 640) return;
+  if (!isMobile) return;
 
   menuBtn.style.display = "block";
-  menu.classList.remove("navigation-menu--mobile");
   closeMenuBtn.style.display = "none";
+  menu.classList.remove("navigation-menu--mobile");
 };
 
 // Smoth scroll
