@@ -484,6 +484,15 @@ footer {
   }
 }
 
+@keyframes mobileMenuShow {
+  0% {
+    clip-path: circle(1% at 100% 0);
+  }
+  100% {
+    clip-path: circle(100% at 50% 50%);
+  }
+}
+
 @media only screen and (max-width: 640px) {
   root {
     font-size: 12px;
@@ -561,6 +570,7 @@ footer {
     justify-content: center;
     align-items: center;
     background: linear-gradient(to top left, #e8e8e8, #fff);
+    animation: mobileMenuShow 0.3s linear 0s 1;
   }
 
   .navigation-link--active a {
