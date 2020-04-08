@@ -298,7 +298,7 @@ header {
 /* ABOUT */
 
 .section--about {
-  background-image: url(/images/business.jpg);
+  background-image: url(/images/about.jpg);
 }
 
 .section--about p {
@@ -326,7 +326,7 @@ header {
 /* MISSION  */
 
 .section--mission {
-  background-image: url(/images/skydiver.jpg);
+  background-image: url(/images/mission.jpg);
   justify-content: flex-start;
   padding-top: 6rem;
 }
@@ -443,7 +443,7 @@ header {
 
 .section--contact {
   color: #f5f5f5;
-  background-image: url(/images/mountains.jpg);
+  background-image: url(/images/contact.jpg);
 }
 
 .section--contact a {
@@ -516,6 +516,10 @@ footer {
     overflow: scroll;
   }
 
+  .video-background {
+    margin-left: -100%;
+  }
+
   /* MOBILE MENU  */
 
   .mobile-menu-icon {
@@ -568,13 +572,17 @@ footer {
     font-size: 2rem;
     padding: 0 1rem;
   }
-
+  .section--about {
+    background-image: url(/images/about-mobile.jpg);
+  }
   .section--about p,
   .section--approach p,
   .section--mission p {
     width: 100%;
   }
-
+  .section--mission {
+    background-image: url(/images/mission-mobile.jpg);
+  }
   .team-list {
     flex-direction: column;
   }
@@ -604,6 +612,10 @@ footer {
   .portfolio-card {
     width: 100%;
     margin-bottom: 1rem;
+  }
+
+  .section--contact {
+    background-image: url(/images/contact-mobile.jpg);
   }
 
   .section--contact a {
