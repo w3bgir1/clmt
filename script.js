@@ -67,6 +67,7 @@ const srcPath = isMobile ? "/images/header-mobile.mp4" : "/images/header.mp4";
 
 videoSource.setAttribute("src", srcPath);
 video.load();
+video.play();
 
 window.addEventListener("scroll", () => {
   let active = document.elementFromPoint(
