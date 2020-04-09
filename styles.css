@@ -492,12 +492,29 @@ footer {
     clip-path: circle(100% at 50% 50%);
   }
 }
+@media only screen and (max-width: 850px) {
+  html {
+    font-size: 14px;
+  }
+  .navigation-link a {
+    font-size: 1rem;
+    padding: 0.5rem;
+    padding-bottom: 1rem;
+  }
+  .section--mission p,
+  .section--approach p,
+  .section--about p {
+    width: 75%;
+  }
+  .portfolio-card {
+    width: 45%;
+  }
+}
 
 @media only screen and (max-width: 640px) {
-  root {
+  html {
     font-size: 12px;
   }
-
   .quote {
     font-size: 1.2rem;
     line-height: 1.8rem;
@@ -552,6 +569,7 @@ footer {
   }
 
   .navigation-menu {
+    overflow: hidden;
     width: 0;
     height: 0;
   }
