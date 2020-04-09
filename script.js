@@ -67,8 +67,9 @@ const addVideo = (name) => {
   video.autoplay = true;
   video.muted = true;
   video.loop = true;
+  video.playsinline = true;
   const source = document.createElement("source");
-  source.type = "video/mp4";
+  source.type = 'video/mp4;codecs="avc1.42E01E, mp4a.40.2"';
   source.src = `images/${name}${isMobile ? "-mobile" : ""}.mp4`;
   video.appendChild(source);
   document.querySelector(`.video-wrapper--${name}`).appendChild(video);
