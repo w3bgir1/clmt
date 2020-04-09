@@ -69,7 +69,7 @@ const addVideo = (name) => {
   video.loop = true;
   const source = document.createElement("source");
   source.type = "video/mp4";
-  source.src = `/images/${name}${isMobile ? "-mobile" : ""}.mp4`;
+  source.src = `images/${name}${isMobile ? "-mobile" : ""}.mp4`;
   video.appendChild(source);
   document.querySelector(`.video-wrapper--${name}`).appendChild(video);
   video.load();
