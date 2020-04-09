@@ -61,24 +61,18 @@ const modalContent = document.querySelector(".modal-content");
 const menuBtn = document.querySelector(".mobile-menu-icon--bars");
 const closeMenuBtn = document.querySelector(".mobile-menu-icon--close");
 
-const addVideo = (name) => {
-  const video = document.createElement("VIDEO");
-  video.className = "video-background";
-  video.autoplay = true;
-  video.muted = true;
-  video.loop = true;
-  video.playsinline = true;
-  const source = document.createElement("source");
-  source.type = 'video/mp4;codecs="avc1.42E01E, mp4a.40.2"';
-  source.src = `images/${name}${isMobile ? "-mobile" : ""}.mp4`;
-  video.appendChild(source);
-  document.querySelector(`.video-wrapper--${name}`).appendChild(video);
+const changeVideoSrcToDesktop = (name) => {
+  const video = document.querySelector(`.video-background--${name}`);
+  const videoSrc = document.querySelector(`.video-source--${name}`);
+  videoSrc.src = `images/${name}.mp4`;
   video.load();
   video.play();
 };
 
-addVideo("home");
-addVideo("team");
+if (window.innerWidth > 640) {
+  changeVideoSrcToDesktop("home");
+  changeVideoSrcToDesktop("team");
+}
 
 window.addEventListener("scroll", () => {
   let active = document.elementFromPoint(
