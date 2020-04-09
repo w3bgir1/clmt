@@ -60,14 +60,24 @@ const modal = document.querySelector(".modal");
 const modalContent = document.querySelector(".modal-content");
 const menuBtn = document.querySelector(".mobile-menu-icon--bars");
 const closeMenuBtn = document.querySelector(".mobile-menu-icon--close");
-const videoSource = document.querySelector(".video-source");
-const video = document.querySelector(".video-background--home");
 
-const srcPath = isMobile ? "/images/header-mobile.mp4" : "/images/header.mp4";
+const addVideo = (name) => {
+  const video = document.createElement("VIDEO");
+  video.className = "video-background";
+  video.autoplay = true;
+  video.muted = true;
+  video.loop = true;
+  const source = document.createElement("source");
+  source.type = "video/mp4";
+  source.src = `/images/${name}${isMobile ? "-mobile" : ""}.mp4`;
+  video.appendChild(source);
+  document.querySelector(`.video-wrapper--${name}`).appendChild(video);
+  video.load();
+  video.play();
+};
 
-videoSource.setAttribute("src", srcPath);
-video.load();
-video.play();
+addVideo("home");
+addVideo("team");
 
 window.addEventListener("scroll", () => {
   let active = document.elementFromPoint(
