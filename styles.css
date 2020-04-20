@@ -187,7 +187,7 @@ h4 {
   min-height: 70vh;
   padding: 3rem;
   padding-top: 6rem;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
 }
 
 .person-description {
@@ -206,7 +206,7 @@ h4 {
 }
 .person-photo {
   width: 100%;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   margin-bottom: 1rem;
 }
 
@@ -440,6 +440,7 @@ header {
   padding: 0.5rem 1rem;
   background-color: #32bb8f;
   margin-bottom: 2rem;
+  border-radius: 5px;
 }
 
 .team-avatar:hover .team-more {
