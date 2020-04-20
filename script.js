@@ -36,7 +36,7 @@ const data = {
   },
   han: {
     name: "Han de Groot",
-    photo: "",
+    photo: "images/Han.JPG",
     linkedin: "https://www.linkedin.com/in/handegroot/",
     email: "han@clmt.partners",
     list: `

@@ -517,6 +517,9 @@ footer {
   html {
     font-size: 14px;
   }
+  .modal-content {
+    width: 80%;
+  }
   .navigation-link a {
     font-size: 1rem;
     padding: 0.5rem;
@@ -531,7 +534,7 @@ footer {
 
 @media only screen and (max-width: 640px) {
   html {
-    font-size: 12px;
+    font-size: 13px;
   }
   .quote {
     font-size: 1.2rem;
@@ -557,7 +560,23 @@ footer {
   .modal-content {
     width: 90%;
     max-height: 90vh;
+    min-height: 90vh;
     overflow: scroll;
+    padding-top: 3rem;
+  }
+
+  .person-description {
+    margin: 0;
+    flex-direction: column;
+  }
+
+  .person-info {
+    margin-right: 0;
+  }
+
+  .btn--close {
+    top: 1rem;
+    right: 1.5rem;
   }
 
   /* MOBILE MENU  */
@@ -648,6 +667,8 @@ footer {
   .team-avatar {
     width: 5rem;
     height: 5rem;
+    border: 2px solid #32bb8f;
+
     margin-right: 1rem;
   }
 
