@@ -415,7 +415,7 @@ header {
   height: 10rem;
   border-radius: 100%;
   background: #2a2d34;
-  border: 5px solid #2a2d34;
+  border: 5px solid #000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -647,7 +647,6 @@ footer {
     padding: 0 1rem;
   }
   .section--about {
-    background-image: url(/images/about-mobile.jpg);
   }
   .section--about p,
   .section--approach p,
