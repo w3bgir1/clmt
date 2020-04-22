@@ -43,6 +43,7 @@ li {
 
 p {
   text-align: justify;
+  font-size: 1.1rem;
 }
 
 h3 {
@@ -333,24 +334,27 @@ header {
 }
 
 .section--about p {
-  color: #f5f5f5;
   width: 50%;
   margin-bottom: 3rem;
+}
+
+.section--about h3 {
+  color: #2a2d34;
 }
 
 /* APPROACH  */
 
 .section--approach {
-  height: auto;
+  background-image: url(/images/approach.jpg);
   padding: 6rem 0;
 }
 .section--approach p {
+  color: #f5f5f5;
   width: 50%;
   margin-left: auto;
 }
 
 .section--approach h3 {
-  color: #2a2d34;
   margin-left: auto;
 }
 
@@ -677,7 +681,8 @@ footer {
   }
 
   .section--approach {
-    padding: 3rem 0;
+    padding: 0;
+    background-image: url(/images/approach-mobile.jpg);
   }
 
   .section--contact {

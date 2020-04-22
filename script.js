@@ -47,7 +47,6 @@ const data = {
   Co-founder of Stadswaarde, a Dutch real estate developer and investor, aiming to redefine the concept of sustainable urban living
   </li>
   <li>MSc in Business Administration from Erasmus University Rotterdam
-  Investor in Tech & Life Science
   </li>`,
   },
 };
