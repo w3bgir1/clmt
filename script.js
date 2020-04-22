@@ -1,7 +1,7 @@
 const data = {
   sander: {
     name: "Sander van Maanen",
-    photo: "",
+    photo: "images/Sander.JPG",
     linkedin: "https://www.linkedin.com/in/sander-van-maanen-863102/",
     email: "sander@clmt.partners",
     list: `
