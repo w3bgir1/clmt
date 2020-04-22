@@ -69,7 +69,7 @@ const changeVideoSrcToDesktop = (name) => {
 
 if (window.innerWidth > 640) {
   changeVideoSrcToDesktop("home");
-  changeVideoSrcToDesktop("team");
+  // changeVideoSrcToDesktop("team");
 }
 
 window.addEventListener("scroll", () => {
