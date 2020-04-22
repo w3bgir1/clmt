@@ -106,8 +106,8 @@ h4 {
   font-size: 1.5rem;
   font-style: italic;
   font-weight: 700;
-  padding: 2rem 0;
-  margin: 3rem auto;
+  padding: 1rem 0;
+  margin: 2rem auto;
   z-index: 1;
 }
 
@@ -334,12 +334,9 @@ header {
 }
 
 .section--about p {
+  color: #f5f5f5;
   width: 50%;
   margin-bottom: 3rem;
-}
-
-.section--about h3 {
-  color: #2a2d34;
 }
 
 /* APPROACH  */
@@ -377,23 +374,24 @@ header {
 
 /* TEAM  */
 
-.video-wrapper--team::after {
-  background-image: repeating-linear-gradient(
+/* .video-wrapper--team::after {
+  /* background-image: repeating-linear-gradient(
     to right top,
     rgba(0, 0, 0, 0.3) 0px,
     rgba(0, 0, 0, 0.3) 2px,
     rgba(0, 0, 0, 0.5) 2px,
     rgba(0, 0, 0, 0.5) 4px
-  );
-}
+  ); */
 
 .section--team {
-  position: absolute;
-  min-width: 100vw;
+  background-image: url(/images/team.jpg);
+
+  /* position: absolute; */
+  /* min-width: 100vw;
   min-height: 100%;
   top: 0;
   left: 0;
-  z-index: 9;
+  z-index: 9; */
   color: #f5f5f5;
 }
 
@@ -417,7 +415,7 @@ header {
   height: 10rem;
   border-radius: 100%;
   background: #2a2d34;
-  border: 5px solid #32bb8f;
+  border: 5px solid #2a2d34;
   display: flex;
   justify-content: center;
   align-items: center;
