@@ -374,24 +374,8 @@ header {
 
 /* TEAM  */
 
-/* .video-wrapper--team::after {
-  /* background-image: repeating-linear-gradient(
-    to right top,
-    rgba(0, 0, 0, 0.3) 0px,
-    rgba(0, 0, 0, 0.3) 2px,
-    rgba(0, 0, 0, 0.5) 2px,
-    rgba(0, 0, 0, 0.5) 4px
-  ); */
-
 .section--team {
   background-image: url(/images/team.jpg);
-
-  /* position: absolute; */
-  /* min-width: 100vw;
-  min-height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 9; */
   color: #f5f5f5;
 }
 
@@ -415,7 +399,7 @@ header {
   height: 10rem;
   border-radius: 100%;
   background: #2a2d34;
-  border: 5px solid #000;
+  border: 5px solid #f5f5f5;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -646,8 +630,7 @@ footer {
     font-size: 2rem;
     padding: 0 1rem;
   }
-  .section--about {
-  }
+
   .section--about p,
   .section--approach p,
   .section--mission p {
@@ -669,7 +652,6 @@ footer {
     width: 5rem;
     height: 5rem;
     border: 2px solid #32bb8f;
-
     margin-right: 1rem;
   }
 
