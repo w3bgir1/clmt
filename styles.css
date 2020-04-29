@@ -660,7 +660,9 @@ footer {
   .team-avatar i {
     font-size: 4rem;
   }
-
+  .section--team {
+    background-image: url(/images/team-mobile.jpg);
+  }
   .section--approach {
     padding: 0;
     background-image: url(/images/approach-mobile.jpg);
