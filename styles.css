@@ -138,19 +138,22 @@ h4 {
 
 .video {
   position: relative;
+  width: 100vw;
+  height: 100vh;
 }
 
 .video-wrapper {
   position: relative;
   z-index: 1;
   width: 100vw;
-  max-height: 100vh;
+  height: 100vh;
   overflow: hidden;
   padding: 0;
 }
 .video-background {
-  min-width: 100vw;
-  min-height: 100vh;
+  position: absolute;
+  min-width: 100vw !important;
+  bottom: 0;
 }
 .video-wrapper::after {
   position: absolute;
