@@ -5,15 +5,21 @@ const data = {
     linkedin: "https://www.linkedin.com/in/sander-van-maanen-863102/",
     email: "sander@clmt.partners",
     list: `
-    <li>
-    Former Managing Director at AlpInvest, a Carlyle group company managing ~$50bn of Private Equity assets where he was global head of co-investments and member of the global investment committee
-  </li>
-  <li>
-  Established AlpInvest Asia and responsible for investments across Asia, Australia and New Zealand
-  </li>
-  <li>Previously at Procter & Gamble and The Boston Consulting Group
-  </li>
-  <li>MSc from Delft University of Technology and MBA from INSEAD</li>`,
+            <li>
+              Former Managing Director at AlpInvest, a Carlyle group company managing ~$50bn of
+              Private Equity assets where he was global head of co-investments and member of the
+              global investment committee
+            </li>
+            <li>
+              Established AlpInvest Asia and responsible for investments across Asia, Australia and
+              New Zealand
+            </li>
+            <li>
+              Previously at Procter &amp; Gamble and The Boston Consulting Group
+            </li>
+            <li>
+              MSc from Delft University of Technology and MBA from INSEAD
+            </li>`,
   },
   steven: {
     name: "Steven Zwaan",
@@ -21,18 +27,18 @@ const data = {
     linkedin: "https://www.linkedin.com/in/steven-zwaan-bb81bb/",
     email: "steven@clmt.partners",
     list: `
-    <li>
-    Co-founder and board member of UPC Renewables Asia Pacific. UPC is an independent renewable energy company committed to the growth markets of Asia and Australia
-  </li>
-  <li>
-  Co-founder and board member of MyTown, the Philippines’ first and largest integrated provider of affordable co-living spaces for young professionals
-
-  </li>
-  <li>
-  Previously a Managing Director at ABN AMRO Rothschild and RBS in Hong Kong.
-  </li>
-  <li>Master in Law from Erasmus University Rotterdam
-  </li>`,
+            <li>
+              Co-founder and board member of UPC Renewables Asia Pacific. UPC is an independent renewable energy company committed to the growth markets of Asia and Australia
+            </li>
+            <li>
+              Co-founder and board member of MyTown, the Philippines’ first and largest integrated provider of affordable co-living spaces for young professionals
+            </li>
+            <li>
+              Previously a Managing Director at ABN AMRO Rothschild and RBS in Hong Kong.
+            </li>
+            <li>
+              Master in Law from Erasmus University Rotterdam
+            </li>`,
   },
   han: {
     name: "Han de Groot",
@@ -40,14 +46,15 @@ const data = {
     linkedin: "https://www.linkedin.com/in/handegroot/",
     email: "han@clmt.partners",
     list: `
-    <li>
-    Founder of MetrixLab, former CEO and board member of Macromill Group, a leading marketing technology company. Han managed the company from start-up to public exit on the Tokyo Stock Exchange as founder, CEO, board member and shareholder
-  </li>
-  <li>
-  Co-founder of Stadswaarde, a Dutch real estate developer and investor, aiming to redefine the concept of sustainable urban living
-  </li>
-  <li>MSc in Business Administration from Erasmus University Rotterdam
-  </li>`,
+            <li>
+              Founder of MetrixLab, former CEO and board member of Macromill Group, a leading marketing technology company. Han managed the company from start-up to public exit on the Tokyo Stock Exchange as founder, CEO, board member and shareholder
+            </li>
+            <li>
+              Co-founder of Stadswaarde, a Dutch real estate developer and investor, aiming to redefine the concept of sustainable urban living
+            </li>
+            <li>
+              MSc in Business Administration from Erasmus University Rotterdam
+            </li>`,
   },
 };
 

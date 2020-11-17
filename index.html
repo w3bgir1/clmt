@@ -1,240 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/1a6f0dea63.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>CLMT Partners</title>
-  </head>
-  <body>
-    <header>
-      <nav id="navigation">
-        <div class="navigation-logo">
-          <img src="images/logo.png" alt="CLMT Partners" />
-        </div>
-        <i
-          class="fas fa-bars mobile-menu-icon mobile-menu-icon--bars"
-          onclick="showMobileMenu()"
-        ></i>
-        <i
-          class="far fa-times-circle mobile-menu-icon mobile-menu-icon--close"
-          onclick="closeMobileMenu()"
-        ></i>
-        <ul class="navigation-menu">
-          <li
-            data-link="home"
-            onclick="closeMobileMenu()"
-            class="navigation-link navigation-link--active"
-          >
-            <a href="#home">Home</a>
-          </li>
-          <li
-            data-link="about"
-            onclick="closeMobileMenu()"
-            class="navigation-link"
-          >
-            <a href="#about">About us</a>
-          </li>
-          <li
-            data-link="approach"
-            onclick="closeMobileMenu()"
-            class="navigation-link"
-          >
-            <a href="#approach">Approach</a>
-          </li>
-          <li
-            data-link="mission"
-            onclick="closeMobileMenu()"
-            class="navigation-link"
-          >
-            <a href="#mission">Mission</a>
-          </li>
-          <li
-            data-link="team"
-            onclick="closeMobileMenu()"
-            class="navigation-link"
-          >
-            <a href="#team">Team</a>
-          </li>
-          <li
-            data-link="contact"
-            onclick="closeMobileMenu()"
-            class="navigation-link"
-          >
-            <a href="#contact">Contact</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <section class="modal">
-      <div class="modal-content"></div>
-    </section>
-    <div class="video">
-      <div class="video-wrapper video-wrapper--home">
-        <video
-          class="video-background video-background--home"
-          poster="images/home-poster.jpg"
-          autoplay
-          playsinline
-          muted
-          loop
-        >
-          <source
-            class="video-source--home"
-            src="images/home-mobile.mp4"
-            type="video/mp4"
-          />
-          Your browser is not supported!
-        </video>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/1a6f0dea63.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>CLMT Partners</title>
+</head>
+
+<body>
+  <header>
+    <nav id="navigation">
+      <div class="navigation-logo">
+        <img src="images/logo.png" alt="CLMT Partners" />
       </div>
-      <section id="home" class="section section--home">
-        <h1>
-          We invest in renewable energy opportunities
-        </h1>
-      </section>
+      <i class="fas fa-bars mobile-menu-icon mobile-menu-icon--bars" onclick="showMobileMenu()"></i>
+      <i class="far fa-times-circle mobile-menu-icon mobile-menu-icon--close" onclick="closeMobileMenu()"></i>
+      <ul class="navigation-menu">
+        <li data-link="home" onclick="closeMobileMenu()" class="navigation-link navigation-link--active">
+          <a href="#home">Home</a>
+        </li>
+        <li data-link="about" onclick="closeMobileMenu()" class="navigation-link">
+          <a href="#about">About us</a>
+        </li>
+        <li data-link="approach" onclick="closeMobileMenu()" class="navigation-link">
+          <a href="#approach">Approach</a>
+        </li>
+        <li data-link="focus" onclick="closeMobileMenu()" class="navigation-link">
+          <a href="#focus">Portfolio Focus</a>
+        </li>
+        <li data-link="holdings" onclick="closeMobileMenu()" class="navigation-link">
+          <a href="#holdings">Strategic holdings</a>
+        </li>
+        <li data-link="team" onclick="closeMobileMenu()" class="navigation-link">
+          <a href="#team">Team</a>
+        </li>
+        <li data-link="contact" onclick="closeMobileMenu()" class="navigation-link">
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <section class="modal">
+    <div class="modal-content"></div>
+  </section>
+  <div class="video">
+    <div class="video-wrapper video-wrapper--home">
+      <video class="video-background video-background--home" poster="images/home-poster.jpg" autoplay playsinline muted
+        loop>
+        <source class="video-source--home" src="images/home-mobile.mp4" type="video/mp4" />
+        Your browser is not supported!
+      </video>
     </div>
-    <p class="content quote">
-      Climate change is happening suddenly and soon. The world is skidding
-      toward a future that’s overheated and underwater and where carbon will be
-      treated as a costly waste product. Renewable energy has to be an integral
-      part of any climate solution
-    </p>
-    <section id="about" class="section section--about">
-      <div class="content">
-        <h3>About us</h3>
-        <p>
-          CLMT Partners invests in real assets and companies in the global
-          renewable energy sector. We focus on the growth markets of Asia and
-          Australia where the energy transition has only just started and with a GDP larger than the rest of the world combined.
-          <br />
-          Our founders have lived and worked in Asia for +30 years and have
-          extensive experience in investment, renewable energy, asset management, finance,
-          entrepreneurship and managing companies across the full life cycle
-          from startup to IPO.
-          <br />
-          CLMT Partners was founded in 2019 and is based in Amsterdam, the
-          Netherlands.
-        </p>
-      </div>
+    <section id="home" class="section section--home">
+      <h1>
+        We invest in next-generation companies and projects to catalyze innovation and deliver
+        outsized returns, while reducing the environmental footprint and improving lives.
+      </h1>
     </section>
-    <section id="approach" class="section section--approach">
-      <div class="content">
-        <h3>Approach</h3>
-        <p>
-          CLMT Partners sources and selects high quality sustainable assets and
-          structures them into high yielding, well diversified and non-cyclical
-          investment products.
-          <br />
-          We partner with visionary business leaders who share our climate
-          change ambition and we build long term relationships by being a
-          trusted capital provider.
-          <br />
-          We bring the financial benefits of sustainability to private capital
-          and provide an alternative source of financing to renewable energy
-          developers, owners and operators.
-        </p>
-      </div>
-    </section>
-    <section id="mission" class="section section--mission">
-      <div class="content">
-        <h3>Mission</h3>
-        <p>
-          Our mission is to act as a catalyst of private capital participation
-          in the energy transition.
-          <br />
-          Our investments embrace sustainability and positive impact as a
-          competitive advantage. We don’t compromise profit for purpose. We
-          believe every investment is an opportunity to champion long term
-          impact and accelerate the energy transition.
-        </p>
-      </div>
-    </section>
-    <div class="content quote">
-      The world is at crossroads as tackling climate change will affect
-      everything from transportation, real estate, manufacturing and agriculture
-      to energy production and the design of cities
+  </div>
+  <section id="about" class="section section--about">
+    <div class="content">
+      <h3>About us</h3>
+      <p>
+        CLMT Partners is a Multi Family Investment Office.
+        <br />
+        We have international track records as entrepreneurs and extensive experience in
+        investment, asset management and managing companies across the full life cycle from
+        startup to IPO.
+        <br />
+        CLMT Partners was founded in 2019 and is based in Amsterdam, the Netherlands.
+      </p>
     </div>
-      <section id="team" class="section section--team">
-        <div class="content">
-          <h3>Team</h3>
+  </section>
+  <section id="approach" class="section section--approach">
+    <div class="content">
+      <h3>Approach</h3>
+      <p>
+        We identify and partner with visionary business leaders.
+        <br />
+        We lead and invest in opportunities to catalyze innovation and deliver outsized returns.
+        <br />
+        Our investments embrace sustainability and positive impact as a competitive advantage.
+        <br />
+        We work with mission aligned partners.
+      </p>
+    </div>
+  </section>
+  <section id="focus" class="section section--focus">
+    <div class="content">
+      <h3>Portfolio focus</h3>
+      <div class="focus__content">
+        <div>
+          <h4>
+            Energy transition
+          </h4>
           <p>
-            Proven asset management and investment expertise
-            <br />
-            Unique access to proprietary investment opportunities in the
-            renewable energy sector
-            <br />
-            International track record as entrepreneurs and project owners
+            Real assets and
+            companies in the
+            global energy
+            production &amp;
+            storage sector
           </p>
-          <div class="team-list">
-            <div class="team-card">
-              <div class="team-avatar" onclick="handleShow('sander')">
-                <img
-                  class="team-photo"
-                  src="images/Sander_small.jpg"
-                  alt="Stevens Photo"
-                />
-                <div class="team-more"><span>Read more</span></div>
-              </div>
-              <p>Sander van Maanen</p>
-            </div>
-            <div class="team-card">
-              <div class="team-avatar" onclick="handleShow('steven')">
-                <img
-                  class="team-photo"
-                  src="images/Steven_small.jpg"
-                  alt="Stevens Photo"
-                />
-                <div class="team-more"><span>Read more</span></div>
-              </div>
-              <p>Steven Zwaan</p>
-            </div>
-            <div class="team-card">
-              <div class="team-avatar" onclick="handleShow('han')">
-                <img
-                  class="team-photo"
-                  src="images/Han_small.JPG"
-                  alt="Stevens Photo"
-                />
-                <div class="team-more"><span>Read more</span></div>
-              </div>
-              <p>Han de Groot</p>
-            </div>
-          </div>
+          <img src="https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt='' />
         </div>
-      </section>
-    </div>
-    <section id="contact" class="section section--contact">
-      <div class="content">
-        <h3>Contact</h3>
-        <h4>We are CLMT Partners</h4>
-        <p>
-          A'DAM Tower, 13/F<br />
-          Overhoeksplein 1<br />
-          1031 KS Amsterdam <br />
-          The Netherlands <br />
-          <a href="mailto:ask@clmtpartners.com"
-            ><i class="fas fa-envelope icon"></i
-            ><span>ask@clmtpartners.com</span></a
-          >
-        </p>
+        <div>
+          <h4>
+            Food tech
+          </h4>
+          <p>
+            Initiatives to make
+            the global food
+            system sustainable
+          </p>
+          <img src="https://images.unsplash.com/photo-1515150144380-bca9f1650ed9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80" alt="" />
+        </div>
+        <div>
+          <h4>
+            Life sciences
+          </h4>
+          <p>
+            Supporting
+            entrepeneurs in the
+            development of
+            innovative health
+            care products to
+            improve patient
+            outcomes
+          </p>
+          <img src="https://images.unsplash.com/photo-1524683745036-b46f52b8505a?ixlib=rb-1.2.1&auto=format&fit=crop&w=958&q=80" alt="" />
+        </div>
+        <div>
+          <h4>
+            Real estate
+          </h4>
+          <p>
+            Aiming to redefine
+            the concept of
+            sustainable urban
+            living
+          </p>
+          <img src="https://images.unsplash.com/photo-1560920452-da0369e98fe7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80" alt='' />
+        </div>
       </div>
-    </section>
-    <footer>
-      © CLMT Partners. All Rights Reserved.
-      <br />
-      Powering the energy transition
-    </footer>
-    <script src="script.js"></script>
-  </body>
+
+    </div>
+    </div>
+    <div>
+  </section>
+  <section id="holdings" class="section">
+      <h3>STRATEGIC HOLDINGS</h3>
+      <div class="holdings__content">
+        <img src="./images/upc.png" alt="UPC Renewable" />
+        <img src="./images/cc.png" alt="The LiveKindly Collective" />
+        <img src="./images/lk.png" alt="Curie Capital" />
+        <img src="./images/sw.png" alt="Stadswaarde" />
+        <img src="./images/mtcl.png" alt="MyTown" />
+      </div>
+  </section>
+  <section id="team" class="section section--team">
+    <div class="content">
+      <h3>Team</h3>
+      <div class="team-list">
+        <div class="team-card">
+          <div class="team-avatar" onclick="handleShow('sander')">
+            <img class="team-photo" src="images/Sander_small.jpg" alt="Stevens Photo" />
+            <div class="team-more"><span>Read more</span></div>
+          </div>
+          <p>Sander van Maanen</p>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar" onclick="handleShow('steven')">
+            <img class="team-photo" src="images/Steven_small.jpg" alt="Stevens Photo" />
+            <div class="team-more"><span>Read more</span></div>
+          </div>
+          <p>Steven Zwaan</p>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar" onclick="handleShow('han')">
+            <img class="team-photo" src="images/Han_small.JPG" alt="Stevens Photo" />
+            <div class="team-more"><span>Read more</span></div>
+          </div>
+          <p>Han de Groot</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+  <section id="contact" class="section section--contact">
+    <div class="content">
+      <h3>Contact</h3>
+      <h4>We are CLMT Partners</h4>
+      <p>
+        A'DAM Tower, 13/F<br />
+        Overhoeksplein 1<br />
+        1031 KS Amsterdam <br />
+        The Netherlands <br />
+        <a href="mailto:ask@clmtpartners.com"><i class="fas fa-envelope icon"></i><span>ask@clmtpartners.com</span></a>
+      </p>
+    </div>
+  </section>
+  <footer>
+    © CLMT Partners. All Rights Reserved.
+    <br />
+    Powering sustainability
+  </footer>
+  <script src="script.js"></script>
+</body>
+
 </html>
