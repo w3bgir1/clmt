@@ -323,10 +323,13 @@ header {
 }
 
 .section--home h1 {
-  text-align: center;
   color: #f5f5f5;
-  font-size: 3rem;
-  text-shadow: 2px 2px 4px #2a2d34;
+  font-family: Lato, sans-serif;
+  color: #fff;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 300;
+  text-shadow: 0 0 10px rgba(16, 16, 16, 0.3);
   padding: 0 3rem;
   max-width: 1240px;
   margin: 0 auto;
@@ -363,8 +366,15 @@ header {
 /* PORTFOLIO FOCUS  */
 
 .section--focus {
-  background-image: linear-gradient(0deg, #fff 0%, rgba(255, 255, 255, 0)),
-    url(./images/mission.jpg);
+  background-image: linear-gradient(
+      0deg,
+      #fff 0%,
+      #fff 30%,
+      rgba(255, 255, 255, 0)
+    ),
+    url(./images/team.jpg);
+  min-height: 100vh;
+  height: unset;
 }
 
 .section--focus h3 {
@@ -375,6 +385,7 @@ header {
   margin-top: auto;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   margin-bottom: 32px;
 }
 .focus__content div {
@@ -382,9 +393,10 @@ header {
   flex-direction: column;
   background-color: rgba(255, 255, 255, 0.9);
   padding: 32px;
-  /* border-radius: 8px; */
+  border-radius: 8px;
   width: calc(25% - 2rem);
-  border: 1px solid #2a2d34;
+  min-width: 280px;
+  margin-bottom: 32px;
 }
 
 .focus__content p {
@@ -398,7 +410,7 @@ header {
   margin-top: auto;
 }
 
-.focus__content div:not(:last-child) {
+.focus__content div {
   margin-right: 2rem;
 }
 .focus__content h4 {
@@ -409,9 +421,10 @@ header {
 }
 #holdings {
   max-width: 1440px;
-  margin: 0 auto;
+  margin: 4rem auto;
   width: 80%;
-  padding: 5rem 0 8rem;
+  /* padding: 5rem 0 8rem; */
+  height: unset;
 }
 
 #holdings h3 {
@@ -434,14 +447,14 @@ header {
 /* TEAM  */
 
 .section--team {
-  background-image: url(/images/team.jpg);
+  background-image: url(/images/mission.jpg);
   background-position: 0 0;
 }
 .section--team p,
 .section--team h3 {
   color: #f5f5f5;
-  /* color: #2a2d34; */
 }
+
 .team-list {
   margin-top: 2rem;
   display: flex;
@@ -701,7 +714,7 @@ footer {
   }
   .section--focus {
     background-image: linear-gradient(0deg, #fff 0%, rgba(255, 255, 255, 0)),
-      url(/images/mission-mobile.jpg);
+      url(/images/team-mobile.jpg);
   }
   .team-list {
     flex-direction: column;
@@ -742,7 +755,7 @@ footer {
     margin-bottom: 16px;
   }
   .section--team {
-    background-image: url(/images/team-mobile.jpg);
+    background-image: url(/images/mission-mobile.jpg);
   }
   .section--approach {
     padding: 0;
