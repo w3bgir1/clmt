@@ -371,6 +371,10 @@ header {
   min-height: 100vh;
   height: unset;
 }
+
+.section--focus .content {
+  margin: auto;
+}
 .section--focus h3 {
   color: #2a2d34;
 }
@@ -381,6 +385,7 @@ header {
   flex-wrap: wrap;
   margin-bottom: 32px;
 }
+
 .focus__content div {
   display: flex;
   flex-direction: column;
@@ -401,8 +406,7 @@ header {
   object-fit: cover;
   margin-top: auto;
 }
-
-.focus__content div {
+.focus__content div:not(:last-child) {
   margin-right: 2rem;
 }
 .focus__content h4 {
