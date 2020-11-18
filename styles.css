@@ -323,11 +323,16 @@ header {
 }
 
 .section--home h1 {
-  text-align: center;
   color: #f5f5f5;
-  font-size: 3rem;
-  text-shadow: 2px 2px 4px #2a2d34;
+  font-family: Lato, sans-serif;
+  color: #fff;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 300;
+  text-shadow: 0 0 10px rgba(16, 16, 16, 0.3);
   padding: 0 3rem;
+  max-width: 1240px;
+  margin: 0 auto;
 }
 
 /* ABOUT */
@@ -358,16 +363,82 @@ header {
   color: #2a2d34;
 }
 
-/* MISSION  */
+/* PORTFOLIO FOCUS  */
 
-.section--mission {
-  background-image: url(/images/mission.jpg);
+.section--focus {
+  background-image: linear-gradient(0deg, #fff 0%, rgba(255, 255, 255, 0)),
+    url(./images/mission.jpg);
+  min-height: 100vh;
+  height: unset;
 }
 
-.section--mission p {
-  color: #f5f5f5;
-  width: 50%;
-  margin: 0;
+.section--focus .content {
+  margin: auto;
+}
+.section--focus h3 {
+  color: #2a2d34;
+}
+
+.focus__content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.focus__content div {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 32px;
+  border-radius: 8px;
+  width: calc(25% - 2rem);
+  margin-bottom: 32px;
+}
+
+.focus__content p {
+  margin-bottom: 16px;
+}
+
+.focus__content img {
+  width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+  margin-top: auto;
+}
+.focus__content div:not(:last-child) {
+  margin-right: 2rem;
+}
+.focus__content h4 {
+  margin-top: 32px;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #32bb8f;
+}
+#holdings {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 80%;
+  height: unset;
+}
+
+#holdings h3 {
+  color: #2a2d34;
+}
+
+.holdings__content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 64px;
+}
+
+.holdings__content img {
+  max-height: 100px;
+  max-width: 200px;
+  width: auto;
+  margin-top: 16px;
 }
 
 /* TEAM  */
@@ -379,8 +450,8 @@ header {
 .section--team p,
 .section--team h3 {
   color: #f5f5f5;
-  /* color: #2a2d34; */
 }
+
 .team-list {
   margin-top: 2rem;
   display: flex;
@@ -513,10 +584,13 @@ footer {
     padding: 0.5rem;
     padding-bottom: 1rem;
   }
-  .section--mission p,
+  .section--focus p,
   .section--approach p,
   .section--about p {
     width: 75%;
+  }
+  .focus__content div {
+    width: calc(50% - 32px);
   }
 }
 
@@ -635,11 +709,12 @@ footer {
 
   .section--about p,
   .section--approach p,
-  .section--mission p {
+  .section--focus p {
     width: 100%;
   }
-  .section--mission {
-    background-image: url(/images/mission-mobile.jpg);
+  .section--focus {
+    background-image: linear-gradient(0deg, #fff 0%, rgba(255, 255, 255, 0)),
+      url(/images/mission-mobile.jpg);
   }
   .team-list {
     flex-direction: column;
@@ -659,6 +734,33 @@ footer {
 
   .team-avatar i {
     font-size: 4rem;
+  }
+  .section--focus {
+    height: auto;
+    overflow: auto;
+  }
+  .focus__content {
+    flex-direction: column;
+  }
+  #holdings h3 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .holdings__content {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    margin-bottom: 0;
+  }
+
+  .holdings__content a {
+    margin-bottom: 32px;
+  }
+
+  .focus__content div {
+    width: 100%;
+    margin-bottom: 16px;
   }
   .section--team {
     background-image: url(/images/team-mobile.jpg);
